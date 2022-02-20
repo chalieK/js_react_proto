@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdAddCircle } from 'react-icons/md';
 import './App.css';
 import Template from './components/Template';
@@ -72,7 +72,7 @@ const App = () => {
       todos.map(todo => todo.id === id ? {...todo, text} : todo)
     );
   };   
-
+  
   return (
     <Template todoLength={todos.length}>
       <TodoList 
